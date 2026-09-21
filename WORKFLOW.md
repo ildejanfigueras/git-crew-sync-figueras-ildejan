@@ -52,18 +52,18 @@ Finalized the workflow, added the documentation and screenshots, and tagged the 
 
 # Questions/Reflections
 
-### 1. What caused the rejected push error?
+### 1. What did the rejected push error message tell you, and why did it happen?
 
-The push was rejected because the remote branch had changes that were not yet in my local branch. Another clone had already pushed changes, so my local branch was behind. Git rejected the push to prevent me from accidentally overwriting the remote changes.
+The rejected push error message said that the remote repository contained work that I did not have locally. This happened because changes had already been pushed from another clone, so my local branch was behind the remote branch.
 
-### 2. How did Task 3 and Task 4 differ?
+### 2. What's the actual difference between how you resolved Task 3 (merge) vs Task 4 (rebase)?
 
-In Task 3, I used `git fetch` and `git merge` to combine the remote and local changes. This created a merge history after resolving the conflict. In Task 4, I used `git fetch` and `git rebase` to place my local changes on top of the updated remote branch, which kept the history more linear.
+In Task 3, I used `git fetch` and `git merge` to combine the changes from the remote branch with my local changes. This created a merge commit after I resolved the conflict. In Task 4, I used `git fetch` and `git rebase` to update my local branch by placing my local commit on top of the latest remote changes, keeping the commit history more linear.
 
-### 3. What habit could help avoid rejected pushes?
+### 3. What one habit would have avoided both rejected pushes in this lab?
 
-A good habit is to check or fetch the latest changes from the remote repository before starting new work or pushing changes. This helps make sure my local branch is updated.
+The one habit that would have avoided both rejected pushes is checking or fetching the latest changes from the remote repository before pushing my changes.
 
-### 4. Would you use merge or rebase by default on a shared team branch? Why?
+### 4. Which approach - merge or rebase - would you default to on a shared team branch, and why?
 
-I would use merge by default on a shared team branch because it keeps the existing commit history and does not rewrite commits that other team members may already have. Rebase can still be useful on a personal feature branch when a cleaner history is needed.
+I would default to merge on a shared team branch because it preserves the existing commit history and does not rewrite commits that other team members may already have. Rebase can be useful when working on my own feature branch and I want to keep the history cleaner.
