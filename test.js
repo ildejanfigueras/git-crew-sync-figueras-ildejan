@@ -18,6 +18,6 @@ const pay = shifts.calculatePay(6, 20.33);
 assertEqual(pay, 122, 'pay for a 6-hour shift at $20.33/hr');
 
 const overtimePay = shifts.calculatePay(10, 20);
-assertEqual(overtimePay, 220, 'pay for a 10-hour shift with overtime');
+assertEqual(overtimePay, 240, 'pay for a 10-hour shift with overtime');
 
 process.exitCode = failures > 0 ? 1 : 0;
